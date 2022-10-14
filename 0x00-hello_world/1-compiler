@@ -1,7 +1,3 @@
-#include <stdio.h>
+#!/bin/bash
+gcc $CFILE -E -o o
 
-int main(void)
-{
-        printf("Hello world\n");
-        return (0);
-}
