@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -14,8 +14,7 @@ include "main.h"
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *mem;
-	char *ptr_copy, *filler;
-	unsigned int index;
+	char *ptr_copy;
 
 	if (new_size == old_size)
 		return (ptr);
@@ -45,10 +44,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 
-	filler = mem;
-
-	for (index = 0; index < old_size && index < new_size; index++)
-		filler[index] = *ptr_copy++;
 
 	free(ptr);
 	return (mem);
