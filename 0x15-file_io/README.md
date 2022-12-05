@@ -1,0 +1,1 @@
+File descriptora and permissions
